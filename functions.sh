@@ -124,11 +124,12 @@ function mix() {
     npm install laravel-mix browser-sync browser-sync browser-sync-webpack-plugin --save-dev
     npm install bootstrap-sass jquery --save
     cp -r node_modules/laravel-mix/setup/webpack.mix.js ./
- 
+    
     if [[ ! -d "src" ]]; then mkdir -p src; fi
     if [[ ! -f "src/app.scss" ]]; then touch src/app.scss; fi
     if [[ ! -f "src/app.js" ]]; then touch src/app.js; fi
- 
+    
+
     echo ""
     echo "Installation complete. Add this to the scripts section of your package.json:"
     echo ""
@@ -138,6 +139,7 @@ function mix() {
     echo "    \"hot\": \"NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js\","
     echo "    \"production\": \"NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\""
     echo "}"
+    echo "/node_modules/" > .gitignore
   fi
 }
  
