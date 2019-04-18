@@ -22,6 +22,7 @@ alias a="php artisan"
 alias composer='/usr/local/bin/composer'
 alias cdu="composer dump-autoload -o"
 alias phpserve="php -S localhost:8888"
+alias phpenv='docker run -v $(pwd):/www -it -p8086:8086  php:5.6-alpine sh -c "cd www; php -S 0.0.0.0:8086"'
 
 
 # ------------------------------------------------------------
